@@ -1,10 +1,17 @@
-<h1>Shoes</h1>
-
-<h1><%= @department.name %> - <%= @department.name %></h1>
+<h1><%= @department.name %> - <%= @shoe.name %></h1>
 <p><%= @shoe.body %></p>
+<h2>Comments</h2>
 
+<% @shoe.comments.each do |comment| %>
+  <%= render 'comments/comment', { comment: comment } %>
+<% end %>
+
+<hr />
+
+<%= link_to 'Add Comment', new_shoe_comment_path(@shoe) %>
+</br>
 <%= link_to 'Edit Shoe', edit_department_shoe_path([@department, @shoe]) %>
 </br>
 <%= link_to 'Delete Shoe', [@department, @shoe], method: :delete %>
 </br>
-<%= link_to 'Back To Shoes', department_shoes_path(@department) %>
+<%= link_to 'Back To Shoes', department_shoe_path(@department) %>

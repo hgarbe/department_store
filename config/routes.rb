@@ -4,4 +4,8 @@ Rails.application.routes.draw do
    resources :departments do  
    resources :shoes
   end 
+
+  resources :shoes do
+    resources :comments
+  end  
 end
