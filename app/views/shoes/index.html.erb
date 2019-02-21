@@ -1,0 +1,7 @@
+<h1>Click a Shoe To View Content</h1>
+<%= link_to 'Create a new shoe', new_department_shoe_path(@department) %>
+<ul>
+  <% @shoes.each do |shoe| %>
+    <li><%= link_to shoe.name, [@department, shoe] %></li>
+  <% end %>
+</ul>
