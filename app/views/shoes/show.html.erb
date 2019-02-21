@@ -1,7 +1,10 @@
-<h1>Shoes#show</h1>
-<p>Find me in app/views/shoes/show.html.erb</p>
+<h1>Shoes</h1>
+
 <h1><%= @department.name %> - <%= @department.name %></h1>
 <p><%= @shoe.body %></p>
+
 <%= link_to 'Edit Shoe', edit_department_shoe_path([@department, @shoe]) %>
+</br>
 <%= link_to 'Delete Shoe', [@department, @shoe], method: :delete %>
+</br>
 <%= link_to 'Back To Shoes', department_shoes_path(@department) %>
